@@ -11,7 +11,6 @@ public class Puzzle9 {
 
     public void solve() {
         String file = "./inputs/puzzle9_10.txt";
-        int totalOverlaps = 0;
         List<List<Character>> stacks = new ArrayList<>();
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
             String line;

@@ -8,9 +8,13 @@ public class Main {
     static Puzzle7 puzzle7 = new Puzzle7();
     static Puzzle8 puzzle8 = new Puzzle8();
     static Puzzle9 puzzle9 = new Puzzle9();
+    static Puzzle10 puzzle10 = new Puzzle10();
+    static Puzzle11 puzzle11 = new Puzzle11();
+    static Puzzle12 puzzle12 = new Puzzle12();
+    static Puzzle13 puzzle13 = new Puzzle13();
+    static Puzzle14 puzzle14 = new Puzzle14();
 
     public static void main(String[] args) {
-        System.out.println("Hello world!");
-        puzzle9.solve();
+        puzzle14.solve();
     }
 }
