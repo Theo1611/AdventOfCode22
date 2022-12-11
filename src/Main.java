@@ -19,8 +19,10 @@ public class Main {
     static Puzzle18 puzzle18 = new Puzzle18();
     static Puzzle19 puzzle19 = new Puzzle19();
     static Puzzle20 puzzle20 = new Puzzle20();
+    static Puzzle21 puzzle21 = new Puzzle21();
+    static Puzzle22 puzzle22 = new Puzzle22();
 
     public static void main(String[] args) {
-        puzzle20.solve();
+        puzzle22.solve();
     }
 }
