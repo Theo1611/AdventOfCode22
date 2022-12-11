@@ -13,8 +13,14 @@ public class Main {
     static Puzzle12 puzzle12 = new Puzzle12();
     static Puzzle13 puzzle13 = new Puzzle13();
     static Puzzle14 puzzle14 = new Puzzle14();
+    static Puzzle15 puzzle15 = new Puzzle15();
+    static Puzzle16 puzzle16 = new Puzzle16();
+    static Puzzle17 puzzle17 = new Puzzle17();
+    static Puzzle18 puzzle18 = new Puzzle18();
+    static Puzzle19 puzzle19 = new Puzzle19();
+    static Puzzle20 puzzle20 = new Puzzle20();
 
     public static void main(String[] args) {
-        puzzle14.solve();
+        puzzle20.solve();
     }
 }
