@@ -35,9 +35,6 @@ public class Puzzle27 {
     }
 
     private void makeRocks() {
-        maxY += 2;
-        minX -= 150;
-        maxX += 150;
         System.out.println(maxX);
         System.out.println(maxY);
         System.out.println(minX);
@@ -45,11 +42,8 @@ public class Puzzle27 {
         for (char[] chars : display) {
             Arrays.fill(chars, '.');
         }
-        for (int i = minX; i <= maxX; i++) {
-            allRocks.add(new Point(i, maxY));
-        }
         for (Point rock: allRocks) {
-            rock.x = rock.x - minX;
+            rock.x  = rock.x - minX;
             display[rock.y][rock.x] = '#';
         }
     }
@@ -63,20 +57,17 @@ public class Puzzle27 {
     private void pourSand() {
         Point newSand = new Point(500 - minX, 0);
         newSand = moveSand(newSand);
-        while (!newSand.equals(new Point(500 - minX, 0))) {
+        while (newSand != null) {
             display[newSand.y][newSand.x] = 'o';
             allSand.add(newSand);
             newSand = new Point(500 - minX, 0);
             newSand = moveSand(newSand);
         }
-        display[newSand.y][newSand.x] = 'o';
-        allSand.add(newSand);
     }
 
     private Point moveSand(Point sand) {
-        Point orgSand = new Point(1000,1000);
-        while (!orgSand.equals(sand)) {
-            orgSand = new Point(sand);
+        while (sand.y < maxY && sand.x < maxX && sand.x > 0) {
+            Point orgSand = new Point(sand);
             if (display[sand.y + 1][sand.x] == '.') {
                 sand.y++;
             } else if (display[sand.y + 1][sand.x - 1] == '.') {
@@ -87,8 +78,9 @@ public class Puzzle27 {
                 sand.x++;
                 sand.y++;
             }
+            if (orgSand.equals(sand)) {return sand;};
         }
-        return sand;
+        return null;
     }
 
     private void drawLine(String point1, String point2) {

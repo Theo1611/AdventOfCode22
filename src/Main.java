@@ -27,8 +27,12 @@ public class Main {
     static Puzzle26 puzzle26 = new Puzzle26();
     static Puzzle27 puzzle27 = new Puzzle27();
     static Puzzle28 puzzle28 = new Puzzle28();
+    static Puzzle29 puzzle29 = new Puzzle29();
+    static Puzzle30 puzzle30 = new Puzzle30();
+    static Puzzle31 puzzle31 = new Puzzle31();
+    static Puzzle32 puzzle32 = new Puzzle32();
 
     public static void main(String[] args) {
-        puzzle27.solve();
+        puzzle31.solve();
     }
 }
